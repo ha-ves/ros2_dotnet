@@ -15,7 +15,9 @@ find_package(rcldotnet REQUIRED)
 
 find_package(dotnet_cmake_module REQUIRED)
 
+if(NOT CSHARP_TARGET_FRAMEWORK)
 set(CSHARP_TARGET_FRAMEWORK "netcoreapp6.0")
+endif()
 find_package(DotNETExtra REQUIRED)
 
 set(_assemblies_dep_dlls

@@ -29,7 +29,9 @@ if(NOT WIN32)
   endif()
 endif()
 
-set(CSHARP_TARGET_FRAMEWORK "netstandard2.0")
+if(NOT CSHARP_TARGET_FRAMEWORK_VERSION)
+ set(CSHARP_TARGET_FRAMEWORK "netstandard2.0")
+endif()
 
 set(CS_SOURCES
   ActionClient.cs
