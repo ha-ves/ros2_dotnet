@@ -31,6 +31,8 @@ set(_assemblies_dep_dlls
 
 add_dotnet_executable(rcldotnet_talker
   RCLDotnetTalker.cs
+  # uncomment the line bellow to copy dependencies assembly to output:
+  #COPY_INCLUDES
   INCLUDE_DLLS
   ${_assemblies_dep_dlls}
 )
